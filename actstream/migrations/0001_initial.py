@@ -8,7 +8,7 @@ from django.conf import settings
 from actstream.settings import USE_JSONFIELD
 
 if USE_JSONFIELD:
-    from jsonfield.fields import JSONField as DataField
+    from actstream.compat import JSONField as DataField
 else:
     DataField = models.TextField
 
